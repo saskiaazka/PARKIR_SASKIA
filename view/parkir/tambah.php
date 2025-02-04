@@ -13,7 +13,7 @@
         <input type="text" name="id_parkir">
         <br>
         <label for="">jam_masuk</label>
-        <input type="date" name="jam_masuk">
+        <input type="time" name="jam_masuk">
         <br>
         <label for="">tarif_perjam</label>
         <input type="number" name="tarif_perjam">
