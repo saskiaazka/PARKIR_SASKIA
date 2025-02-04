@@ -7,7 +7,7 @@ $tarif_perjam = $_POST['tarif_perjam'];
 $nama_parkir = $_POST['nama_parkir'];
 
 $query = mysqli_query($conn, "
-INSERT INTO parkir VALUES('$id_parkir', '$jam_masuk', '$tarif_perjam', '$nama_parkir'");
+INSERT INTO parkir VALUES('$id_parkir', '$jam_masuk', '$tarif_perjam', '$nama_parkir')");
 
 echo "<script>
 alert('data berhasil disimpan');
