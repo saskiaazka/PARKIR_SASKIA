@@ -1,0 +1,19 @@
+CREATE DATABASE dbparkir_saskia;
+CREATE TABLE parkir ( id_parkir varchar(5) PRIMARY KEY, jam_masuk time(4), tarif_perjam int, nama_parkir varchar(5) );
+CREATE TABLE kendaraan ( plat_nomor varchar(9) PRIMARY KEY, jenis varchar(10), merk text(8), warna text(8) );
+INSERT INTO parkir VALUES 
+("001", "10:00:00.00", 3000, "A10"), 
+("002", "11:00:00.00", 6000, "A11"), 
+("003", "12:00:00.00", 9000, "A12"), 
+("004", "13:00:00.00", 12000, "A13"), 
+("005", "14:00:00.00", 15000, "A14");
+INSERT INTO kendaraan VALUES 
+("D 2324 DS", "Mobil", "Jeep", "Army"), 
+("D 0701 EA", "Mobil", "Crv", "Putih"), 
+("D 0123 IK", "Mobil", "Civic", "Hitam"), 
+("D 0407 AR", "Mobil", "Calya", "Silver"), 
+("D 1808 AG", "Mobil", "Rush", "Hitam");
+
+ALTER TABLE kendaraan add FOREIGN KEY (id_parkir) REFERENCES parkir(id_parkir)
+on DELETE CASCADE 
+on UPDATE CASCADE
